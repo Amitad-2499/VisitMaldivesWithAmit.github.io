@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title> Background Video Website Project </title>		
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="hero">
+		
+		<video autoplay loop plays-inline id="backVideo">
+			<source src="images/Maldives(720P_HD)_1.mp4" type="video/mp4">
+		</video>
+		
+		<div class="logo">
+			<img src="images/logo.png" alt="">
+		</div>
+		<div class="sidebar">
+			<div class="text-box">
+				<h1>MOON LIGHT RESORT</h1>
+				<h4>SPEND YOUR LUXURY TIME HERE <br>amit_ad@support.org</h4>
+				<div class="line"></div>
+			</div>
+		</div>
+		<div class="content">
+			<h1>Maldives</h1>
+			<p>It Leaves a Soulful Experience in the Heart of the Touriest</p>
+			<div class="btn" id="playBtn">
+				<img src="images/play.png" id="icon">Take a Glance
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var backVideo = document.getElementById("backVideo");
+		var playBtn = document.getElementById("playBtn");
+		var icon = document.getElementById("icon");
+		
+		playBtn.onclick= function(){
+			backVideo.style.display="block";
+			if(backVideo.paused){
+				backVideo.play();
+				icon.src="images/pause.png";
+			}else{
+				backVideo.pause();
+				icon.src="images/play.png";
+			}
+		}
+	</script>
+</body>
